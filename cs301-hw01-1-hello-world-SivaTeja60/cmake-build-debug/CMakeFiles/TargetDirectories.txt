@@ -1,0 +1,4 @@
+C:/Users/STSC/CLionProjects/cs301-hw01-1-hello-world-SivaTeja60/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/STSC/CLionProjects/cs301-hw01-1-hello-world-SivaTeja60/cmake-build-debug/CMakeFiles/hello_test.dir
+C:/Users/STSC/CLionProjects/cs301-hw01-1-hello-world-SivaTeja60/cmake-build-debug/CMakeFiles/hello_world.dir
+C:/Users/STSC/CLionProjects/cs301-hw01-1-hello-world-SivaTeja60/cmake-build-debug/CMakeFiles/rebuild_cache.dir
