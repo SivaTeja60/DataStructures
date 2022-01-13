@@ -1,5 +1,5 @@
-finding the contiguous subarray with the largest sum
+# finding the contiguous subarray with the largest sum
 
-Done Using #Kadanes algorithm
+# Used Kadanes algorithm
 
 [LeetCodelink](https://leetcode.com/problems/maximum-subarray/)
