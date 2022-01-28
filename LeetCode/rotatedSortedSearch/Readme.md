@@ -16,7 +16,7 @@ At every index either right or left part of it will be sorted
 ## Checking which side is sorted
 To check left sorted compare mid to low value (i.e. low<=mid) if that condition fails then it sorted in right side  
 
-'''
+```
 #Leftsorted  
 if nums[mid] >= nums[low]:  
   #checking if value exist in left part  
@@ -25,13 +25,14 @@ if nums[mid] >= nums[low]:
   else:  
     low = mid + 1  
 
- '''  
- '''  
+ ```  
+ To check right sorted compare mid to high value (i.e. high>=mid)
+ ```  
 #Rightsorted  
 If nums[mid]<=nums[high]:  
   if nums[mid] <= target and target <= nums[high]:  
     low = mid+1  
   else:  
     high = mid-1  
-'''  
+``` 
 [UsefulLink](https://www.youtube.com/watch?v=r3pMQ8-Ad5s)
