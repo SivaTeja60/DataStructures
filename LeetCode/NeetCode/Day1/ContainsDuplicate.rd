@@ -17,7 +17,7 @@ def containsDuplicate(A):
   
   T=O(n**2) s=O(1)
   
-  #If sorted
+  #By using sorted
  ```
  def containsDuplicate(A):
   for i in range(len(A)-1): 
@@ -25,7 +25,8 @@ def containsDuplicate(A):
       return True
   return False
   ```
-  T=O(n) s=O(1)
+  T=O(nlogn) s=O(1)
+## sorted function uses Tim sorting and time complexity is O(nlogn)
   
   #If not sorted
  ```
