@@ -13,9 +13,9 @@ len(t)---->n
  def ValidAnagram(s,t):
    if len(s)!=len(t):
       return False
-  s=sorted(s)
-  t=sorted(t)
-  if s==t:
+   s=sorted(s)
+   t=sorted(t)
+   if s==t:
     return True
   return False
 
