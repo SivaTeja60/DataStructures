@@ -31,7 +31,7 @@ def ValidAnagram(s,t):
       d1[char]+=1
     else:
       d1[char]=1
-  for char in s:
+  for char in t:
       if char in d2.keys():
         d2[char]+=1
       else:
