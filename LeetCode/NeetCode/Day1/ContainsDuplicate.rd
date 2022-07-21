@@ -29,6 +29,7 @@ def containsDuplicate(A):
 ## sorted function uses Tim sorting and time complexity is O(nlogn)
   
   #If not sorted
+
  ```
   def containsDuplicate(A):
     d={}
