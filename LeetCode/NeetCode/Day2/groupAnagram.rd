@@ -10,16 +10,18 @@ what if we dont have any input?
 #Brute force
 def group_anagram(A):
   res=[]
+  visited=[]
   for i in range(len(A)-1):
-    if A[i] in res:
-      continue
-    for j in range(i+1,len(A)):
+    if A[i] not in visited:
+      temp=[A[i]]
+      visited.append(A[i])
+      for j in range(i+1,len(A)):
         if sorted(A[i])==sorted(A[j]):
-            res.append([A[i],A[j]])
-            continue
-    res.append(A[i])
-  res.append(A[-1])
-  return res.append(A[len(]
+          temp.append(A[j])
+          visited.append(A[j])
+          res.append(temp)
+     res.append([A[len(A)-1]])
+     return res
 T=O(n**3) S=O(n)
                           
 def group_anagram(A):
