@@ -15,7 +15,7 @@ o/p - [0,3] or [3,0]
 ## Bruteforce
 def two_sum(nums,target):
   for i in range(len(nums)-1):
-    for j in range(i,len(nums)):
+    for j in range(i+1,len(nums)):
       if nums[i]+nums[j]==target:
         return [i,j]
     return -1
@@ -25,10 +25,10 @@ T=O(n**2) S=O(1)
 # Using dictionary
 def two_sum(nums,target):
   d={}
-for i in range(len(nums)):
-  if target-nums[i] in d.keys():
-      return [d[key],i]
-  d[key]=i
+  for i in range(len(nums)):
+    if target-nums[i] in d.keys():
+      return [d[target-nums[i]],i]
+    d[nums[i]]=i
  return -1
 T=O(n) S=O(n)
 
