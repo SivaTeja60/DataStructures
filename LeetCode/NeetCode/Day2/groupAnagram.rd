@@ -22,7 +22,16 @@ def group_anagram(A):
   return res.append(A[len(]
 T=O(n**3) S=O(n)
                           
-
 def group_anagram(A):
   d={}
-                          
+  res=[]
+  for i in range(len(A)):
+     if d[sorted(A[i])] in d.keys():
+         d[sorted(A[i])]+=A[i]
+      else:
+         d[sorted(A[i])]=A[i]
+   for key in d:
+      res.append(d[key])
+   return res
+ T=O(n**2) S=O(n)                       
+           
