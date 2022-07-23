@@ -20,7 +20,8 @@ def group_anagram(A):
           temp.append(A[j])
           visited.append(A[j])
           res.append(temp)
-     res.append([A[len(A)-1]])
+     if A[len(A)-1] not in visited:
+        res.append([A[len(A)-1]])
      return res
 T=O(n**3) S=O(n)
                           
