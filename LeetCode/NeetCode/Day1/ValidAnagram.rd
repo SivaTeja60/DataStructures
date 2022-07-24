@@ -61,7 +61,7 @@ def ValidAnagram(s,t):
                 return False
         return True
      
-    T=O(n) S=O(n) or O(1) as dictionary will be constant size of 26 as we have 26 alphabets
+    T=O(n) S=O(s+T) or O(1) as dictionary will be constant size of 26 as we have 26 alphabets no matter what size is s and t
     
  # Using single dictionary
  def ValidAnagram(s,t):
