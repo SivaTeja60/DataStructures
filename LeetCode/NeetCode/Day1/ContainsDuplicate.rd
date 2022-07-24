@@ -35,14 +35,27 @@ def containsDuplicate(A):
   def containsDuplicate(A):
     d={}
     for i in A:
-      if i in d.keys():
-        return True
-      else:
-        d[i]=1
-   return False
+      if i in d:
+         return True
+      d[i]=1
+    return False
  ```
    
    T=O(n) S=O(n)
+
+#Using set
+def containsDuplicate(A):
+  d=set()
+  for i in A:
+    if i in d:
+       return True
+    d.add(i)
+  return False
     
-    
-  
+OR
+def containsDuplicate(A):
+  if len(set(A))==len(A):
+      return False
+  return True
+     
+T=O(n) S=O(n)
