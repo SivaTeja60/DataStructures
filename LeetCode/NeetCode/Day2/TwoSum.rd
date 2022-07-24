@@ -25,11 +25,10 @@ T=O(n**2) S=O(1)
 # Using dictionary
 def two_sum(nums,target):
   d={}
-  for i in range(len(nums)):
-    if target-nums[i] in d.keys():
-      return [d[target-nums[i]],i]
-    d[nums[i]]=i
- return -1
-T=O(n) S=O(n)
+        for i,val in enumerate(nums):
+            if target-val in d:
+                return [d[target-val],i]
+            d[val]=i
+        return -1
 
 
