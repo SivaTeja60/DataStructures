@@ -9,17 +9,13 @@ Should we return top k frequent elements?
 def frequent_elements(nums,k):
   d={}
         res=[]
-        for i in range(len(nums)):
-            if nums[i] in d:
-                d[nums[i]]+=1
-            else:
-                d[nums[i]]=1
+        for i,val in enumerate(nums):
+                d[val]=d.get(val,0)+1
         for key,values in sorted(d.items(), key=lambda x:x[1],reverse=True):
             if k<=0:
                 return res
             res.append(key)
             k-=1
-        return res
 
 T=O(nlogn). S=O(n)
 
