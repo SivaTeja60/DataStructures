@@ -25,18 +25,27 @@ def group_anagram(A):
         if A[len(A)-1] not in visited:
             res.append([A[len(A)-1]])
         return res
-T=O(n**3) S=O(n)
+T=O(n^2*mlogm) S=O(n)
                           
 def group_anagram(A):
   d={}
-  res=[]
-  for i in range(len(A)):
-     if d[sorted(A[i])] in d.keys():
-         d[sorted(A[i])]+=A[i]
-      else:
-         d[sorted(A[i])]=A[i]
-   for key in d:
-      res.append(d[key])
-   return res
- T=O(n**2) S=O(n)                       
+        for i,val in enumerate(A):
+            if tuple(sorted(val)) in d:
+                d[tuple(sorted(val))]+=[val]
+            else:
+                d[tuple(sorted(val))]=[val]
+        return d.values()                      
            
+  T=O(n*mlogm) S=O(n)
+ #Optimized 
+ 
+ from collections import defaultdict 
+ def group_anagram(A):
+    d=defaultdict(list)
+        for s in A:
+            count=[0]*26
+            for c in s:
+                count[ord(c)-ord('a')]+=1
+            d[tuple(count)].append(s)
+        return d.values()
+    T=O(n*m) S=O(n)
