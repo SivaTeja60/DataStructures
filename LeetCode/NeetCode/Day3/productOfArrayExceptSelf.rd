@@ -5,7 +5,6 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 You must write an algorithm that runs in O(n) time and without using the division operation.
 
 nums=[1,2,3,4]
-[2,6,12,4]
 Op = [24,12,8,6]
 
 should i return 0 in case of empty input?
@@ -41,6 +40,22 @@ def product_array(nums):
   return res
 
 T=O(n) S=O(n)
-  
 
+#Optimized
+nums=[1,2,3,4]
+preself=    [1,  1,  2, 6]
+postself=   [24, 12, 4, 1]
+output=     [24, 12, 8, 6]
+def product_array(nums):
+  res=[]
+  temp=1
+  t=1
+  for i,val in enumerate(nums):
+    res.append(temp)
+    temp=temp*val
+  for i in range(len(res)-1,0,-1):
+     res[i]=res[i]*t
+     t=t*nums[i]
+  return res
+T=O(n) S=O(1) as given in question output array doesnt count
 
