@@ -21,14 +21,14 @@ def valid_sudoku(board):
         continue
       #checking all columns
       if (i,j) in d:
-        if board[i][j] in d[(i,j)]:
+        if board[i][j] in d[(:,j)]:
             return False
         d[(i,j)].append(board[i][j])
       else:
         d[(i,j)]=board[i][j]
       #checking all rows
       if (j,i) in d:
-        if board[j][i] in d[(j,i)]:
+        if board[j][i] in d[(j,:)]:
             return False
         d[(j,i)].append(board[j][j])
       else:
