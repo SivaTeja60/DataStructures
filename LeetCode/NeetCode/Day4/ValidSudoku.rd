@@ -12,31 +12,17 @@ Can you explain what do you mean by valid but not solvable?
 what will be the empty boxes represented with?
 
 def valid_sudoku(board):
-  d={}
-  rows=len(board)
-  col=len(board[0])
-  for i in range(rows-1):
-    for j in range(col-1):
-      if board[i][j] == '.':
-        continue
-      #checking all columns
-      if (i,j) in d:
-        if board[i][j] in d[(:,j)]:
-            return False
-        d[(i,j)].append(board[i][j])
-      else:
-        d[(i,j)]=board[i][j]
-      #checking all rows
-      if (j,i) in d:
-        if board[j][i] in d[(j,:)]:
-            return False
-        d[(j,i)].append(board[j][j])
-      else:
-        d[(j,i)]=board[j][i]
-
-  # checking the 3*3
-    for i in range(0,row,3):
-      for j in range(i,i+2):
-        if board[i][j]
-
+  rows=defaultdict(set)
+        cols=defaultdict(set)
+        squares=defaultdict(set)
+        for i in range(9):
+            for j in range(9):
+                if board[i][j]=='.':
+                    continue
+                if (board[i][j] in rows[i]) or (board[i][j] in cols[j]) or (board[i][j] in squares[(i//3,j//3)]):
+                    return False
+                rows[i].add(board[i][j])
+                cols[j].add(board[i][j])
+                squares[(i//3,j//3)].add(board[i][j])
+        return True
       
