@@ -31,5 +31,17 @@ def max_average(nums,k):
 
 T=O(n) S=O(1)
     
-  
+ #More Optimised Sliding window
+def max_average(nums,k):
+  win_start=0
+        win_sum=0
+        max_avg=float('-inf')
+        for win_end in range(len(nums)):
+            win_sum+=nums[win_end]
+            if win_end >= k-1:
+                max_avg=max(max_avg,win_sum/k)
+                win_sum-=nums[win_start]
+                win_start+=1
+        return max_avg
+T=O(n) S=O(1)
     
