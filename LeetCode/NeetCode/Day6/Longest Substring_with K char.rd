@@ -12,3 +12,20 @@ def longest_substring(s,k):
         return max_len
 T=O(n**2) S=O(1)
 
+def longest_substring(s,k):
+  max_len=0
+        left=0
+        d={}
+        for right,val in enumerate(s):
+            if val in d.keys():
+                d[val]+=1
+            else:
+                d[val]=1
+            while len(d)>k:
+                d[s[left]]-=1
+                if d[s[left]]==0:
+                    del(d[s[left]])
+                left+=1
+            max_len=max(max_len,right-left+1)
+        return max_len
+T=O(n) S=O(k)
