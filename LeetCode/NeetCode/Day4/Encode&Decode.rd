@@ -29,5 +29,27 @@ def string_encode(str):
      
     T=O(n*m) --> n is length of list and m is max word size
     S=O(n)
+ 4#word3#two                 
+ def string_encode(strs):
+   s=""
+        for word in strs:
+            s+=(str(len(word))+'#'+word)
+        print(s)
+        return s
+  
+  def string_decode(s):
+    strs=[]
+        i=0
+        while i<(len(s)):
+            j=i
+            while s[j] != '#':
+                j+=1
+            length=int(s[i:j])
+            strs.append(s[j+1:(j+length+1)])
+            i=j+length+1
+        return strs
+                  
+   T=O(n) S=O(1)
+    
     
       
