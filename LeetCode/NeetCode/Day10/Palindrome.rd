@@ -16,3 +16,4 @@ def isPalindrome(s):
             end-=1
         return True
         
+T=O(n) S=O(1)
