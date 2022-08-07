@@ -24,3 +24,4 @@ def threesum(nums):
                     while nums[left]==nums[left-1] and left<right:
                         left+=1
         return res
+T=O(n**2) S=O(1)
